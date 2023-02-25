@@ -11,21 +11,14 @@ export const NewsList = (navigation) => {
     const [news, setNews] = useState([]);
     const [searchText, setSearchText] = useState();
 
-    useEffect(() => {
-        
-        if (AppState.currentState == 'active') {
-            console.log('app is active');
-            // fetchNews();
-        }
-        else {
-            console.log('app is NOT active');
-            // setTimeout(() => {
-            //     console.log('AppState.currentState: ', AppState.currentState);
-                
-            //     fetchNews();
-            // }, 2000);
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (AppState.currentState == 'active') {
+    //         console.log('app is active');
+    //     }
+    //     else {
+    //         console.log('app is NOT active');
+    //     }
+    // }, [])
 
     const fetchNews = async (query) => {
         console.log('fetchNews - query: ', query);
@@ -48,15 +41,7 @@ export const NewsList = (navigation) => {
         </View>
     }
 
-    // function renderNews(item: MovieType) {
-    //     console.log('item.title: ', item.title);
-    //     return (<Item 
-    //         item={item}
-    //         onPress={() => {
-    //             console.log('item: ', item.title);
-    //         }}/>)
-    // }
-    const renderNews = ({item}: MovieType) => (
+    const renderNews = ({item}: NewsType) => (
         // <Item 
         // item={item}
         // onPress={() => {

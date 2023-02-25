@@ -9,7 +9,6 @@ export const getNews = async (query) => {
         console.log('url: ', url);
         
         const response = await axios.get(url)
-        // const data = JSON.parse(response.data)
         const data = response.data
         console.log('data.articles.length: ', data.articles.length);
           
